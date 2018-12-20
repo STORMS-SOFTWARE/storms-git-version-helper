@@ -8,6 +8,6 @@ class GitVersionHelperFacade extends Facade
 {
     protected static function getFacadeAccessor()
     {
-        return 'git-version-helper';
+        return GitVersionHelper::class;
     }
 }

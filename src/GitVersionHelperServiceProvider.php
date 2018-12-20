@@ -7,24 +7,24 @@ use Illuminate\Support\ServiceProvider;
 class GitVersionHelperServiceProvider extends ServiceProvider
 {
     /**
-     * Bootstrap the application services.
+     * Register the application services.
      *
      * @return void
      */
     public function register()
     {
-        //
+        $this->app->singleton(GitVersionHelper::class, function () {
+            return new GitVersionHelper();
+        });
     }
 
     /**
-     * Register the application services.
+     * Bootstrap the application services.
      *
      * @return void
      */
     public function boot()
     {
-        $this->app->singleton(GitVersionHelper::class, function () {
-            return new GitVersionHelper();
-        });
+        //
     }
 }
