@@ -14,5 +14,15 @@
         "psr-4": {
             "Storms\\GitVersionHelper\\": "src/"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Storms\\GitVersionHelper\\GitVersionHelperServiceProvider"
+            ],
+            "aliases": {
+                "GitVersionHelper": "Storms\\GitVersionHelper\\GitVersionHelperFacade"
+            }
+        }
     }
 }
