@@ -26,7 +26,5 @@ class GitVersionHelperServiceProvider extends ServiceProvider
         $this->app->singleton(GitVersionHelper::class, function () {
             return new GitVersionHelper();
         });
-
-        $this->app->alias(GitVersionHelper::class, 'git-version-helper');
     }
 }

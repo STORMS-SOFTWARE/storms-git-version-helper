@@ -37,7 +37,7 @@ class GitVersionHelper
 
     private static function version()
     {
-        $versionFile = base_path() . '.version';
+        $versionFile = base_path() . '/.version';
 
         if (!file_exists($versionFile)) {
             return null;
