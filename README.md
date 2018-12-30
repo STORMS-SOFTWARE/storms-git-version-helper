@@ -39,3 +39,15 @@ so that the versions are described properly.
 
 Add `.version` to your `.gitignore` file
 so your working dir stays clean and you don't accidentally commit it.
+
+Ad the following to the scripts section in your `composer.json`:
+
+    "scripts": {
+            ...
+            
+            "post-update-cmd": [
+                "@php -r \"file_exists('.version') && unlink('.version');\""
+            ]
+        }
+        
+This deletes the `.version` file every time you run `composer update`. 
