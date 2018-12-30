@@ -40,7 +40,7 @@ so that the versions are described properly.
 Add `.version` to your `.gitignore` file
 so your working dir stays clean and you don't accidentally commit it.
 
-Ad the following to the scripts section in your `composer.json`:
+Add the following to the scripts section in your `composer.json`:
 
     "scripts": {
             ...
