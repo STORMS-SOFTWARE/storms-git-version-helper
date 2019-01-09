@@ -16,7 +16,7 @@ class GitVersionHelper
 
             chdir(base_path());
 
-            shell_exec('git describe --tags > .version');
+            shell_exec('git describe --tags `git rev-list --tags --max-count=1` > .version');
 
             chdir($currentDir);
 
